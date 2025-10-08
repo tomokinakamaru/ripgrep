@@ -214,3 +214,5 @@ dir_deep_03/**
 
 # MATCH /parent_dir/dir_deep_33
 **/dir_deep_33/**
+
+foo**/bar

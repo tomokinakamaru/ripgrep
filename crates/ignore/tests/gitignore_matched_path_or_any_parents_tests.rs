@@ -22,6 +22,15 @@ fn test_path_should_be_under_root() {
 }
 
 #[test]
+fn test_xxx() {
+    let gitignore = get_gitignore();
+    let m = |path: &str| {
+        gitignore.matched_path_or_any_parents(Path::new(path), false)
+    };
+    assert!(m("ROOT/foobar").is_ignore());
+}
+
+#[test]
 fn test_files_in_root() {
     let gitignore = get_gitignore();
     let m = |path: &str| {
